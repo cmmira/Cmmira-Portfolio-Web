@@ -18,45 +18,38 @@
         rel="stylesheet"
         type="text/css"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Text+Me+One">
     {% endblock %}
+    <style>
+      header{
+        font-family: 'Text Me One', sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-    <div class="px-3 py-2 text-bg-dark border-bottom">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-            Christopher Miranda
-          </a>
-
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-            <li>
-              <a href="#" class="nav-link text-secondary">
-                <i class="bi bi-alarm d-block mx-1" style="font-size: 2rem"></i>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <i class="bi bi-person-circle d-block mx-3" style="font-size: 2rem"></i>
-                About Me
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <i class="bi bi-collection d-block mx-3" style="font-size: 2rem"></i>
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <i class="bi bi-envelope d-block mx-4" style="font-size: 2rem"></i>
-                Contact Me
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+  <body style="background: linear-gradient(120DEG, #004977, 65%, #D03027)">
+    <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img src="static/assets/titlename.png" height="100" width="300">
+      </a>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">
+            <i class="bi bi-house d-block mx-1" style="font-size: 2rem"></i>
+            Home
+        </a></li>
+        <li class="nav-item"><a href="{{ url_for('about') }}" class="nav-link text-white">
+          <i class="bi bi-person-circle d-block mx-3" style="font-size: 2rem"></i>
+          About Me
+        </a></li>
+        <li class="nav-item"><a href="#{{ url_for('portfolio') }}" class="nav-link text-white">
+          <i class="bi bi-collection d-block mx-2" style="font-size: 2rem"></i>
+          Portfolio
+        </a></li>
+        <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link text-white">
+          <i class="bi bi-envelope d-block mx-4" style="font-size: 2rem"></i>
+          Contact Me
+        </a></li>
+      </ul>
+    </header>
+  </div>
   <body/>
